@@ -8,22 +8,46 @@
     tools:context=".MainActivity">
 
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="48dp"
+        android:text="BMR КАЛЬКУЛЯТОР"
+        android:textSize="29dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="63dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="28dp"
+        android:id="@+id/imageWomenClick"
+        android:layout_width="61dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="104dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/blueman" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/click_women" />
+
+
+    <ImageView
+        android:id="@+id/imageManClick"
+        android:layout_width="61dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/click_men" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="237dp"
         android:layout_height="151dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="44dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -45,9 +69,10 @@
 
             <EditText
                 android:id="@+id/height"
-                android:layout_width="104dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:layout_marginStart="5dp"
+                android:inputType="number" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -75,7 +100,8 @@
                 android:id="@+id/weight"
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:layout_marginStart="5dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -102,7 +128,8 @@
                 android:id="@+id/age"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:layout_marginStart="5dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -113,25 +140,29 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left|center_vertical"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="52dp"
-        android:text="BMR КАЛЬКУЛЯТОР"
-        android:textSize="29dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageMen"
+        android:layout_width="62dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="200dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blueman" />
+
+    <ImageView
+        android:id="@+id/imageWomen"
         android:layout_width="61dp"
         android:layout_height="65dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="104dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pinkwomen" />
@@ -140,14 +171,15 @@
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_calculate"
-            android:layout_width="wrap_content"
+            android:layout_width="136dp"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:background="@drawable/gradient"
@@ -158,7 +190,7 @@
             tools:layout_editor_absoluteX="68dp"
             tools:layout_editor_absoluteY="275dp" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_cansel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -174,13 +206,16 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="12dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.087">
 
 
         <TextView
@@ -190,7 +225,7 @@
             android:layout_marginTop="12dp"
             android:text="Информация о показателях калорий"
             android:textSize="20dp"
-            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
@@ -199,15 +234,18 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="150dp"
             android:text="Ваш BMR"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:layout_marginBottom="12dp"
+            android:textSize="20dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/output_bmr"
-            android:layout_width="112dp"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="140dp"
-            android:inputType="number" />
+            android:layout_marginStart="165dp"
+            android:inputType="number"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -219,18 +257,87 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:text="Ежедневно тратится калорий"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/info_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="12dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@android:drawable/ic_dialog_info"
+                android:tint="#f5d15c"/>
         </LinearLayout>
 
-        <LinearLayout
+
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                tools:layout_editor_absoluteX="81dp">
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/sedentary_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Сидячий образ: 0 ккал"
+                    android:textColor="#2196F3"
+                    android:textSize="18dp" />
 
+                <TextView
+                    android:id="@+id/light_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Маленькая активность: 0 ккал"
+                    android:textColor="#4CAF50"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/moderate_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Средняя активность: 0 ккал"
+                    android:textColor="#FF9800"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/active_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Сильная активность: 0 ккал"
+                    android:textColor="#F44336"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/very_active_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Максимальная активность: 0 ккал"
+                    android:textColor="#9C27B0"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
 
