@@ -96,6 +96,7 @@
                 tools:layout_editor_absoluteX="115dp"
                 tools:layout_editor_absoluteY="127dp" />
 
+
             <EditText
                 android:id="@+id/weight"
                 android:layout_width="110dp"
