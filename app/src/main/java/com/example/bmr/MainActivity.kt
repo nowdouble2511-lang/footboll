@@ -35,10 +35,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var manClickedImage: ImageView
     lateinit var infoIcon: ImageView
 
-    // Переменные для выбора пола
-    var selectedGender = "" // "women", "man" или ""
-
-    // Переменная для хранения BMR
+    var selectedGender = ""
     var currentBMR = 0.0
 
 
@@ -77,7 +74,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         infoIcon.setOnClickListener {
-            // Открываем новую активность с информацией
             val intent = Intent(this, InfoActivity::class.java)
             startActivity(intent)
         }
@@ -91,7 +87,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Функция выбора женщины
     fun selectWomen() {
         selectedGender = "women"
 
@@ -106,15 +101,12 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, "Выбран женский пол", Toast.LENGTH_SHORT).show()
     }
 
-    // Функция выбора мужчины
     fun selectMan() {
         selectedGender = "man"
 
-        // Показываем нажатое изображение мужчины
         manImage.visibility = android.view.View.GONE
         manClickedImage.visibility = android.view.View.VISIBLE
 
-        // Скрываем нажатое изображение женщины
         womenImage.visibility = android.view.View.VISIBLE
         womenClickedImage.visibility = android.view.View.GONE
 
@@ -138,7 +130,6 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        // Преобразуем текст в числа
         val height = heightText.toFloat()
         val weight = weightText.toFloat()
         val age = ageText.toInt()
@@ -156,7 +147,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Показываем BMR
-        val bmrRounded = String.format("%.0f", currentBMR)
+        val bmrRounded = String.format("%.2f", currentBMR)
         outputBmr.text = bmrRounded
 
         // Рассчитываем и показываем ежедневные калории для каждого уровня активности
@@ -167,7 +158,6 @@ class MainActivity : AppCompatActivity() {
 
     // Функция расчета ежедневных калорий
     fun calculateDailyCalories() {
-        // Коэффициенты активности
         val sedentary = 1.2
         val light = 1.375
         val moderate = 1.55
@@ -180,11 +170,11 @@ class MainActivity : AppCompatActivity() {
         val activeCal = currentBMR * active
         val veryActiveCal = currentBMR * veryActive
 
-        sedentaryResult.text = "Сидячий образ: ${String.format("%.0f", sedentaryCal)} ккал"
-        lightResult.text = "Маленькая активность: ${String.format("%.0f", lightCal)} ккал"
-        moderateResult.text = "Средняя активность: ${String.format("%.0f", moderateCal)} ккал"
-        activeResult.text = "Сильная активность: ${String.format("%.0f", activeCal)} ккал"
-        veryActiveResult.text = "Максимальная активность: ${String.format("%.0f", veryActiveCal)} ккал"
+        sedentaryResult.text = "Сидячий образ: ${String.format("%.2f", sedentaryCal)} ккал"
+        lightResult.text = "Маленькая активность: ${String.format("%.2f", lightCal)} ккал"
+        moderateResult.text = "Средняя активность: ${String.format("%.2f", moderateCal)} ккал"
+        activeResult.text = "Сильная активность: ${String.format("%.2f", activeCal)} ккал"
+        veryActiveResult.text = "Максимальная активность: ${String.format("%.2f", veryActiveCal)} ккал"
     }
 
     // Функция очистки всех полей
