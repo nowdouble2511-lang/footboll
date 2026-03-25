@@ -1,6 +1,7 @@
 package com.example.bmr
 
 import android.content.Intent
+import androidx.appcompat.app.AlertDialog
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -98,7 +99,7 @@ class MainActivity : AppCompatActivity() {
         manImage.visibility = android.view.View.VISIBLE
         manClickedImage.visibility = android.view.View.GONE
 
-        Toast.makeText(this, "Выбран женский пол", Toast.LENGTH_SHORT).show()
+        showDialog("Выбор пола", "Выбран женский пол")
     }
 
     fun selectMan() {
@@ -110,7 +111,7 @@ class MainActivity : AppCompatActivity() {
         womenImage.visibility = android.view.View.VISIBLE
         womenClickedImage.visibility = android.view.View.GONE
 
-        Toast.makeText(this, "Выбран мужской пол", Toast.LENGTH_SHORT).show()
+        showDialog("Выбор пола", "Выбран мужской пол")
     }
 
     // Функция расчета BMR
@@ -121,12 +122,12 @@ class MainActivity : AppCompatActivity() {
         val ageText = ageInput.text.toString()
 
         if (heightText.isEmpty() || weightText.isEmpty() || ageText.isEmpty()) {
-            Toast.makeText(this, "Заполните все поля!", Toast.LENGTH_SHORT).show()
+            showDialog("Ошибка", "Заполните все поля!")
             return
         }
 
         if (selectedGender.isEmpty()) {
-            Toast.makeText(this, "Выберите пол!", Toast.LENGTH_SHORT).show()
+            showDialog("Ошибка", "Выберите пол!")
             return
         }
 
@@ -135,7 +136,7 @@ class MainActivity : AppCompatActivity() {
         val age = ageText.toInt()
 
         if (height <= 0 || weight <= 0 || age <= 0) {
-            Toast.makeText(this, "Введите корректные значения (больше 0)", Toast.LENGTH_SHORT).show()
+            showDialog("Ошибка", "Введите корректные значения (больше 0)")
             return
         }
 
@@ -153,7 +154,7 @@ class MainActivity : AppCompatActivity() {
         // Рассчитываем и показываем ежедневные калории для каждого уровня активности
         calculateDailyCalories()
 
-        Toast.makeText(this, "BMR рассчитан: $bmrRounded ккал", Toast.LENGTH_LONG).show()
+        showDialog("Результат", "BMR рассчитан: $bmrRounded ккал")
     }
 
     // Функция расчета ежедневных калорий
@@ -198,6 +199,19 @@ class MainActivity : AppCompatActivity() {
         manImage.visibility = android.view.View.VISIBLE
         manClickedImage.visibility = android.view.View.GONE
 
-        Toast.makeText(this, "Все поля очищены", Toast.LENGTH_SHORT).show()
+        showDialog("Очистка", "Все поля очищены")
+    }
+
+    private fun showDialog(title: String, message: String) {
+        val builder = AlertDialog.Builder(this)
+        builder
+            .setMessage(message)
+            .setTitle(title)
+            .setPositiveButton("OK") { dialog, which ->
+                dialog.dismiss()
+            }
+
+        val dialog = builder.create()
+        dialog.show()
     }
 }
