@@ -1,0 +1,20 @@
+# Gradle files
+.gradle/
+.idea/
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+local.properties
+.kotlin/
+
+# Build outputs
+build/
+*/build/
+
+# Android Studio
+*.iml
+.DS_Store
+
+# OS files
+Thumbs.db
