@@ -7,4 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity_resors">
 
+    <TextView
+        android:text="@+string/hello_text"
+        android:layout_width="143dp"
+        android:layout_height="139dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
