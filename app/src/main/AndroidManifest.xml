@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FootBall">
         <activity
+            android:name=".MainActivity_resors"
+            android:exported="false" />
+        <activity
             android:name=".DataUserActivity"
             android:exported="true" />
         <activity
