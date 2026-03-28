@@ -52,7 +52,7 @@
         android:layout_width="256dp"
         android:layout_height="52dp"
         android:ems="10"
-        android:hint="Пароль"
+        android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
@@ -80,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@string/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
