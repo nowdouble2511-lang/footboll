@@ -2,6 +2,8 @@ package com.example.football
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -22,6 +24,12 @@ class MainActivity : AppCompatActivity() {
         login = findViewById(R.id.editTextTextEmailAddress)
         password = findViewById(R.id.editTextTextPassword)
         forward = findViewById(R.id.button)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater;
+        inflater.inflate(R.menu.main_menu, menu)
+        return true
     }
 
     fun getLogin (view: View){
