@@ -4,9 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -31,6 +33,26 @@ class MainActivity : AppCompatActivity() {
         inflater.inflate(R.menu.main_menu, menu)
         return true
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        var headerView : TextView = findViewById(R.id.text1)
+        return  when (item.itemId) {
+            R.id.open_settings -> {
+                headerView.setText("Открыть")
+                true
+            }
+            R.id.action_settings -> {
+                headerView.setText("Настройки")
+                true
+            }
+            R.id.save_settings-> {
+                headerView.setText("Сохранить")
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 
     fun getLogin (view: View){
 
