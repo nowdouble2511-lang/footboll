@@ -61,39 +61,39 @@ class MainActivity : AppCompatActivity() {
 
         // Проверка на пустые поля
         if (email.isEmpty()) {
-            login.error = "Введите email"
+            login.setError ( getString(R.string.toast_enter_email))
             login.requestFocus()
-            Toast.makeText(this, "Введите email", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_enter_email, Toast.LENGTH_SHORT).show()
             return
         }
 
         if (pass.isEmpty()) {
-            password.error = "Введите пароль"
+            password.setError ( getString(R.string.toast_enter_password))
             password.requestFocus()
-            Toast.makeText(this, "Введите пароль", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_enter_password, Toast.LENGTH_SHORT).show()
             return
         }
 
         // Проверка формата email
         if (!isValidEmail(email)) {
-            login.error = "Некорректный email"
+            login.setError ( getString(R.string.toast_invalid_credentials))
             login.requestFocus()
-            Toast.makeText(this, "Введите корректный email", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_invalid_credentials, Toast.LENGTH_SHORT).show()
             return
         }
 
         // Проверка длины пароля
         if (pass.length < 6) {
-            password.error = "Пароль должен быть минимум 6 символов"
+            password.setError ( getString(R.string.toast_invalid_credentials))
             password.requestFocus()
-            Toast.makeText(this, "Пароль должен быть минимум 6 символов", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_invalid_credentials, Toast.LENGTH_SHORT).show()
             return
         }
 
         val intent= Intent(this@MainActivity, DataUserActivity::class.java)
         intent.putExtra("login", login.text.toString())
 
-        val toast = Toast.makeText(applicationContext, "Вход выполнен", Toast.LENGTH_SHORT)
+        val toast = Toast.makeText(applicationContext, R.string.toast_authorization_success, Toast.LENGTH_SHORT)
         toast.show()
         startActivity(intent)
     }

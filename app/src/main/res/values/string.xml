@@ -8,9 +8,9 @@
     <string name="login_password_hint">Password</string>
     <string name="login_remember_me">Remember me</string>
     <string name="login_forgot_password">Forgot password?</string>
-    <string name="login_button">Sign in</string>
-    <string name="login_no_account">Don\'t have an account?</string>
-    <string name="login_signup_now">Sign up now</string>
+    <string name="login_button">Login</string>
+    <string name="login_no_account">No account?</string>
+    <string name="login_signup_now">Sign up</string>
 
     <!-- Activity Registration -->
     <string name="registration_title">SoccerSkills</string>
@@ -22,10 +22,12 @@
     <string name="registration_back_button">Back</string>
 
     <!-- Toast Messages -->
-    <string name="toast_enter_email">Please enter email</string>
-    <string name="toast_enter_password">Please enter password</string>
+    <string name="toast_enter_email">Enter email</string>
+    <string name="toast_enter_password">Enter password</string>
     <string name="toast_invalid_credentials">Invalid email or password</string>
-    <string name="toast_enter_name">Please enter name</string>
+    <string name="toast_enter_name">Enter name</string>
+    <string name="toast_confirm_the_password">Confirm_the_password</string>
     <string name="toast_password_mismatch">Passwords do not match</string>
+    <string name="toast_authorization_success">Authorization is successful!</string>
     <string name="toast_registration_success">Registration successful!</string>
 </resources>

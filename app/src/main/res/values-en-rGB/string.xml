@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SoccerSkill</string>
+
+    <!-- Activity Login -->
+    <string name="login_title">SoccerSkills</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_remember_me">Remember me</string>
+    <string name="login_forgot_password">Forgot password?</string>
+    <string name="login_button">Login</string>
+    <string name="login_no_account">No account?</string>
+    <string name="login_signup_now">Sign up</string>
+
+    <!-- Activity Registration -->
+    <string name="registration_title">SoccerSkills</string>
+    <string name="registration_name_hint">Name</string>
+    <string name="registration_email_hint">Email</string>
+    <string name="registration_password_hint">Password</string>
+    <string name="registration_confirm_password_hint">Confirm password</string>
+    <string name="registration_register_button">Register</string>
+    <string name="registration_back_button">Back</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_enter_email">Enter email</string>
+    <string name="toast_enter_password">Enter password</string>
+    <string name="toast_invalid_credentials">Invalid email or password</string>
+    <string name="toast_enter_name">Enter name</string>
+    <string name="toast_password_mismatch">Passwords do not match</string>
+    <string name="toast_registration_success">Registration successful!</string>
+</resources>

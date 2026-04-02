@@ -56,54 +56,54 @@ class MainActivity2_Registration : AppCompatActivity() {
 
         // Проверка имени
         if (name.isEmpty()) {
-            editTextName.error = "Введите имя"
+            editTextName.setError ( getString(R.string.toast_enter_name))
             editTextName.requestFocus()
-            Toast.makeText(this, "Введите имя", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_enter_name, Toast.LENGTH_SHORT).show()
             return
         }
 
         // Проверка email
         if (email.isEmpty()) {
-            editTextEmail.error = "Введите email"
+            editTextEmail.setError ( getString(R.string.toast_enter_email))
             editTextEmail.requestFocus()
-            Toast.makeText(this, "Введите email", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_enter_email, Toast.LENGTH_SHORT).show()
             return
         }
 
         if (!isValidEmail(email)) {
-            editTextEmail.error = "Некорректный email"
+            editTextEmail.setError ( getString(R.string.toast_invalid_credentials))
             editTextEmail.requestFocus()
-            Toast.makeText(this, "Введите корректный email", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_invalid_credentials, Toast.LENGTH_SHORT).show()
             return
         }
 
         // Проверка пароля
         if (password.isEmpty()) {
-            editTextPassword.error = "Введите пароль"
+            editTextPassword.setError ( getString(R.string.toast_enter_password))
             editTextPassword.requestFocus()
-            Toast.makeText(this, "Введите пароль", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_enter_password, Toast.LENGTH_SHORT).show()
             return
         }
 
         if (password.length < 6) {
-            editTextPassword.error = "Минимум 6 символов"
+            editTextPassword.setError ( getString(R.string.toast_invalid_credentials))
             editTextPassword.requestFocus()
-            Toast.makeText(this, "Пароль должен содержать минимум 6 символов", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_invalid_credentials, Toast.LENGTH_SHORT).show()
             return
         }
 
         // Проверка подтверждения пароля
         if (confirmPassword.isEmpty()) {
-            editTextConfirmPassword.error = "Подтвердите пароль"
+            editTextConfirmPassword.setError ( getString(R.string.toast_confirm_the_password))
             editTextConfirmPassword.requestFocus()
-            Toast.makeText(this, "Подтвердите пароль", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_confirm_the_password, Toast.LENGTH_SHORT).show()
             return
         }
 
         if (password != confirmPassword) {
-            editTextConfirmPassword.error = "Пароли не совпадают"
+            editTextConfirmPassword.setError ( getString(R.string.toast_password_mismatch))
             editTextConfirmPassword.requestFocus()
-            Toast.makeText(this, "Пароли не совпадают", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_password_mismatch, Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -116,7 +116,8 @@ class MainActivity2_Registration : AppCompatActivity() {
     }
 
     private fun registerUser(name: String, email: String, password: String) {
-        Toast.makeText(this, "Регистрация успешна! Добро пожаловать, $name", Toast.LENGTH_LONG).show()
+        val message = "${getString(R.string.toast_registration_success)}, $name"
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
 
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
