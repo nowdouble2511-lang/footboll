@@ -1,3 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BMR</string>
+
+    <string name="menu_marathon_info">About Marathon</string>
+    <string name="menu_log_bmr">Write BMR to LOG</string>
+    <string name="marathon_title">Marathon Skills</string>
+    <string name="marathon_info">MarathonSkills is an international educational project in the field of IT.\n\nParticipants solve real business problems from leading companies.\n\nThe marathon helps develop skills in programming, design, and management.</string>
 </resources>

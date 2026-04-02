@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMR</string>
+
+    <string name="menu_marathon_info">О марафоне</string>
+    <string name="menu_log_bmr">Записать BMR в LOG</string>
+    <string name="marathon_title">MarathonSkills</string>
+    <string name="marathon_info">MarathonSkills — это международный образовательный проект в сфере IT.\n\nУчастники решают реальные бизнес-задачи от ведущих компаний.\n\nМарафон помогает развить навыки в программировании, дизайне и управлении.</string>
+</resources>
