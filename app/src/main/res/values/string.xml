@@ -30,4 +30,8 @@
     <string name="toast_password_mismatch">Passwords do not match</string>
     <string name="toast_authorization_success">Authorization is successful!</string>
     <string name="toast_registration_success">Registration successful!</string>
+
+    <!-- DataUserActivity-->
+    <string name="your_login">Your login:</string>
+    <string name="button_back">Back</string>
 </resources>

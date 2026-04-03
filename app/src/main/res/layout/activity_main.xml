@@ -65,6 +65,8 @@
         android:ems="10"
         android:hint="@string/login_email_hint"
         android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,9 +85,9 @@
         android:id="@+id/text_forgot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
         android:layout_marginTop="8dp"
         android:text="@string/login_forgot_password"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
@@ -93,10 +95,10 @@
         android:id="@+id/button"
         android:layout_width="135dp"
         android:layout_height="46dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="48dp"
         android:onClick="getLogin"
         android:text="@string/login_button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
@@ -104,21 +106,22 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:text="@string/login_no_account"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="138dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="153dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="12dp"
         android:onClick="goRegistration"
         android:text="@string/login_signup_now"
         android:textStyle="bold"
+        android:gravity="center_horizontal|center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 

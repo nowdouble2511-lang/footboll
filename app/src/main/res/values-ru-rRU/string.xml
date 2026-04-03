@@ -30,4 +30,8 @@
     <string name="toast_password_mismatch">Пароли не совпадают</string>
     <string name="toast_authorization_success">Авторизация успешна!</string>
     <string name="toast_registration_success">Регистрация успешна!</string>
+
+    <!-- DataUserActivity-->
+    <string name="your_login">Ваш логин:</string>
+    <string name="button_back">Назад</string>
 </resources>
