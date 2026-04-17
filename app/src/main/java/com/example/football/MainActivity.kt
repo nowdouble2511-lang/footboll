@@ -84,9 +84,9 @@ class MainActivity : AppCompatActivity() {
 
         // Проверка длины пароля
         if (pass.length < 6) {
-            password.setError ( getString(R.string.toast_invalid_credentials))
+            password.setError ( getString(R.string.toast_invalid_credentials_password))
             password.requestFocus()
-            Toast.makeText(this, R.string.toast_invalid_credentials, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_invalid_credentials_password, Toast.LENGTH_SHORT).show()
             return
         }
 

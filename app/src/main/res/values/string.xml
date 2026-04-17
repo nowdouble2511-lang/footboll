@@ -24,10 +24,20 @@
     <!-- Toast Messages -->
     <string name="toast_enter_email">Enter email</string>
     <string name="toast_enter_password">Enter password</string>
-    <string name="toast_invalid_credentials">Invalid email or password</string>
+    <string name="toast_invalid_credentials">Invalid email. Incorrect format. Example: user@gmail.com</string>
+    <string name="toast_invalid_credentials_password">Invalid password. Enter 6 or more characters</string>
     <string name="toast_enter_name">Enter name</string>
-    <string name="toast_confirm_the_password">Confirm_the_password</string>
+    <string name="toast_confirm_the_password">Confirm the password</string>
     <string name="toast_password_mismatch">Passwords do not match</string>
     <string name="toast_authorization_success">Authorization is successful!</string>
     <string name="toast_registration_success">Registration successful!</string>
+
+    <!-- DataUserActivity-->
+    <string name="your_login">Your login:</string>
+    <string name="button_back">Back</string>
+
+    <!-- Menu-->
+    <string name="action_settings">Settings</string>
+    <string name="save_settings">Save</string>
+    <string name="open_settings">Open</string>
 </resources>

@@ -24,10 +24,20 @@
     <!-- Toast Messages -->
     <string name="toast_enter_email">Введите email</string>
     <string name="toast_enter_password">Введите пароль</string>
-    <string name="toast_invalid_credentials">Неверный email или пароль</string>
+    <string name="toast_invalid_credentials">Неверный email. Не тот формат. Пример: user@gmail.com</string>
+    <string name="toast_invalid_credentials_password">Неправильный пароль. Введить 6 или более символов</string>
     <string name="toast_enter_name">Введите имя</string>
     <string name="toast_confirm_the_password">Подтвердите пароль</string>
     <string name="toast_password_mismatch">Пароли не совпадают</string>
     <string name="toast_authorization_success">Авторизация успешна!</string>
     <string name="toast_registration_success">Регистрация успешна!</string>
+
+    <!-- DataUserActivity-->
+    <string name="your_login">Ваш логин:</string>
+    <string name="button_back">Назад</string>
+
+    <!-- Menu-->
+    <string name="action_settings">Настройки</string>
+    <string name="save_settings">Сохранить</string>
+    <string name="open_settings">Открыть</string>
 </resources>

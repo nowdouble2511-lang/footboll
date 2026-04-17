@@ -8,17 +8,22 @@
     tools:context=".DataUserActivity">
 
     <LinearLayout
+        android:layout_width="321dp"
+        android:layout_height="429dp"
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <TextView
             android:id="@+id/logintxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ваш логин:"
-            android:layout_margin="40dp"/>
-
+            android:layout_margin="30dp"
+            android:text="@string/your_login"
+            android:textSize="16dp" />
 
         <Button
             android:id="@+id/back_button"
@@ -26,8 +31,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|center_vertical"
             android:layout_margin="10dp"
+            android:textSize="16dp"
             android:onClick="back"
-            android:text="Back" />
+            android:text="@string/button_back" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
