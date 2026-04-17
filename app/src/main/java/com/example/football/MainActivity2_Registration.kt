@@ -86,9 +86,9 @@ class MainActivity2_Registration : AppCompatActivity() {
         }
 
         if (password.length < 6) {
-            editTextPassword.setError ( getString(R.string.toast_invalid_credentials))
+            editTextPassword.setError ( getString(R.string.toast_invalid_credentials_password))
             editTextPassword.requestFocus()
-            Toast.makeText(this, R.string.toast_invalid_credentials, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_invalid_credentials_password, Toast.LENGTH_SHORT).show()
             return
         }
 
